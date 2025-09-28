@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:zamalek/Chosse_pages.dart';
 import 'package:zamalek/manager/coins_app_cubit/coins_cubit.dart';
 import 'bottom_bar.dart';
 import 'coins_app/screens/coins_screen.dart';
@@ -19,6 +20,6 @@ class Newsapp extends StatelessWidget {
         BlocProvider( create: (context) => CoinsCubit ()..getCoins(),),
         BlocProvider( create: (context) => ButtonNavationBarCubit (),)
       ],
-      child: MaterialApp(home: NavigationBarItemScreen(), debugShowCheckedModeBanner: false),
+      child: MaterialApp(home: ChossePages(), debugShowCheckedModeBanner: false),
     );
   }}

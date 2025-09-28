@@ -1,5 +1,7 @@
 
 
+import 'package:zamalek/Model/category_list.dart';
+
 import '../../model/articles.dart';
 
 

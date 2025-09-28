@@ -1,7 +1,7 @@
 /*import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:zamalek/manager/news_app_cupit/app_cubit.dart';
-import 'package:zamalek/manager/news_app_cupit/app_state.dart';
+import 'package:zamalek/manager/news_app_cupit/app_stateproduct.dart';
 
 
 import '../model/articles.dart';

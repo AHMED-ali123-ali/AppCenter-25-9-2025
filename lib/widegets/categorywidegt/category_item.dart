@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:zamalek/manager/news_app_cupit/app_cubit.dart';
@@ -18,16 +19,21 @@ class categoryitem extends StatelessWidget {
             context.read<AppCubit>().getArticle(value: value.name);
           },
           child: CircleAvatar(
-                radius:80 ,
-                backgroundImage:NetworkImage (value.imageUrl),
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 100),
-                  child: Text(value.name,style: TextStyle(fontSize: 25,color: Colors.white),),
-                ),
-
+            radius: 80,
+            backgroundColor: Colors.grey[200],
+            child: ClipOval(
+              child: CachedNetworkImage(
+                imageUrl: value.imageUrl,
+                fit: BoxFit.cover,
+                width: 160,
+                height: 160,
+                placeholder: (context, url) =>
+                const Center(child: CircularProgressIndicator()),
+                errorWidget: (context, url, error) =>
+                const Icon(Icons.error, size: 50, color: Colors.red),
+              ),
             ),
-
-        ),
-      );
+          )
+      ));
   }
 }

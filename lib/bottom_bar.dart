@@ -12,7 +12,7 @@ class NavigationBarItemScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<Widget> screens = const [HomeScreen(), CoinsScreen()];
+    List<Widget> screens = const [homeScreen(), CoinsScreen()];
 
     return BlocBuilder<ButtonNavationBarCubit, BottomNavationState>(
       builder: (context, state) {

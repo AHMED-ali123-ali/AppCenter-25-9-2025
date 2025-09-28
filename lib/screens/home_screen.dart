@@ -6,10 +6,8 @@ import 'package:zamalek/manager/news_app_cupit/app_state.dart';
 
 import '../widegets/categorywidegt/Healthy.dart';
 import '../widegets/categorywidegt/categorylist.dart';
-class   HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
-
-
+class   homeScreen extends StatelessWidget {
+  const homeScreen({super.key});
 
 
   @override

@@ -1,7 +1,10 @@
-import 'package:bloc/bloc.dart';
+
+import 'package:flutter_bloc/flutter_bloc.dart';
+
 import '../../model/articles.dart';
 import '../../network/abi-service.dart';
 import 'app_state.dart';
+
 class AppCubit extends Cubit<AppState>{
   Api apiservice = Api();
   List<Articles> newArticle =[];
